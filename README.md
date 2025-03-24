@@ -13,8 +13,8 @@ A simple VS Code extension that shows how much money you've earned during your w
 
 This extension contributes the following settings:
 
-- `mySalaryExtension.monthlySalary`: Your monthly salary (default: 60000)
-- `mySalaryExtension.startWorkTime`: Your daily work start time in HH:MM:SS format (default: '09:00:00')
+- `time-is-money.monthlySalary`: Your monthly salary (default: 60000)
+- `time-is-money.startWorkTime`: Your daily work start time in HH:MM:SS format (default: '09:00:00')
 
 ## How It Works
 

@@ -20,7 +20,7 @@ export function activate(context: vscode.ExtensionContext) {
 
     const loadConfigAndCompute = () => {
         // Read current configuration
-        const config = vscode.workspace.getConfiguration('mySalaryExtension');
+        const config = vscode.workspace.getConfiguration('time-is-money');
         const monthlySalary = config.get<number>('monthlySalary', 60000);
         const startWorkTimeString = config.get<string>('startWorkTime', '09:00:00');
 
@@ -54,10 +54,10 @@ export function activate(context: vscode.ExtensionContext) {
 
     // 5. Listen for configuration changes
     const configChangeDisposable = vscode.workspace.onDidChangeConfiguration((e) => {
-        // Reload if the user changed any "mySalaryExtension.xxx" settings
+        // Reload if the user changed any "time-is-money.xxx" settings
         if (
-            e.affectsConfiguration('mySalaryExtension.monthlySalary') ||
-            e.affectsConfiguration('mySalaryExtension.startWorkTime')
+            e.affectsConfiguration('time-is-money.monthlySalary') ||
+            e.affectsConfiguration('time-is-money.startWorkTime')
         ) {
             loadConfigAndCompute(); // Recalculate per-second wage and work start time
         }
