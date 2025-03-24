@@ -10,7 +10,7 @@ export function activate(context: vscode.ExtensionContext) {
     const statusBarItem = vscode.window.createStatusBarItem(
         vscode.StatusBarAlignment.Left
     );
-    statusBarItem.tooltip = '今日從上班到現在的累計薪資';
+    statusBarItem.tooltip = 'Accumulated earnings since starting work today';
     statusBarItem.show();
 
     // 2. Load configuration and calculate salary metrics
@@ -41,12 +41,12 @@ export function activate(context: vscode.ExtensionContext) {
     const updateSalary = () => {
         const currentTime = new Date();
         if (currentTime < startWorkTime) {
-            statusBarItem.text = `賺了 $0.00`;
+            statusBarItem.text = `Earned $0.00`;
             return;
         }
         const elapsedSeconds = (currentTime.getTime() - startWorkTime.getTime()) / 1000;
         const earned = wagePerSecond * elapsedSeconds;
-        statusBarItem.text = `賺了 $${earned.toFixed(2)}`;
+        statusBarItem.text = `Earned $${earned.toFixed(2)}`;
     };
 
     // 4. Update status bar every second

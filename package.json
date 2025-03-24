@@ -1,7 +1,7 @@
 {
   "name": "time-is-money",
   "displayName": "Time is Money",
-  "description": "Shows how much money you've earned since starting work today (顯示自從開始上班以來，到目前為止賺了多少錢)",
+  "description": "Shows how much money you've earned since starting work today",
   "version": "0.0.1",
   "publisher": "MooKing",
   "author": {
